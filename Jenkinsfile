@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage("CheckOut") {
             steps{
-             checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/maan98/my-app.git']]])
+             checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/maan98/sonarrepo.git']]])
             }
         }
          stage('Test') {
