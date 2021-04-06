@@ -14,7 +14,7 @@ pipeline {
         }
         stage("Maven Build") {
             steps {
-                sh 'clean install sonar:sonar'
+                sh 'mvn clean install sonar:sonar'
             }
         }
      //    stage('Test sonar code quality') {
