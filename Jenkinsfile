@@ -14,7 +14,7 @@ pipeline {
         }
         stage("Maven Build") {
             steps {
-                sh 'mvn clean install -f sonar-scanner-maven-master/pom.xml'
+                sh 'clean install sonar:sonar'
             }
         }
      //    stage('Test sonar code quality') {
