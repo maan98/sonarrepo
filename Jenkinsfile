@@ -12,9 +12,9 @@ pipeline {
                 sh 'mvn --version'
             }
         }
-        stage("Maven Build") {
+        stage("SonarQube Analysis") {
             steps {
-                sh 'mvn clean install sonar:sonar -f sonar-scanner-maven-master/pom.xml'
+                sh 'mvn sonar:sonar'
             }
         }
      //    stage('Test sonar code quality') {
