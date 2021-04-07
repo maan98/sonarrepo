@@ -14,7 +14,7 @@ pipeline {
         }
         stage("SonarQube Analysis") {
             steps {
-                sh 'mvn sonar:sonar'
+                sh 'mvn sonar:sonar sonar-scanner-maven-master/pom.xml'
             }
         }
      //    stage('Test sonar code quality') {
